@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable scope demo</title>
+    <script>
+        function scopeDemo() {
+
+            glob = 100;// becomes global when the function is called
+            const VAT = 0.2;// local scope and value cannot change
+            // … some code
+
+            VAT = 0.15;	      //uncaught TypeError: Assignment to constant variable.
+
+            var p = 10;			// function scope
+            let q = 2;	// local scope (see for loop)
+
+            for (let i = 0; i < 5; i++) { // scope of i is within the for loop
+                var total = q * p + i; 		// following lines have access to total
+            }
+            console.log(total);
+            console.log(i); // Error
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <script>
+        scopeDemo();
+        console.log(glob);	// 100
+        console.log(vat);   // Error
+        console.log(p); 	     //Uncaught ReferenceError: p is not defined
+        console.log(q);  // Error
+    </script>
+</body>
+
+</html>

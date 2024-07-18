@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Functions</title>
+    <script>
+        function ShowTheDay() {
+            var d = new Date();
+            var w = d.getDay();
+            var s;
+
+            if (w == 0) s = "Sunday";
+            if (w == 1) s = "Monday";
+            if (w == 2) s = "Tuesday";
+            if (w == 3) s = "Wednesday";
+            if (w == 4) s = "Thursday";
+            if (w == 5) s = "Friday";
+            if (w == 6) s = "Saturday";
+
+            alert('Today is ' + s);
+            document.write("Today is <b>" + s + "</b>");
+        }
+    </script>
+</head>
+<body>
+    <p>Welcome to my website</p>
+    <script type="text/javascript">ShowTheDay()</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebService with no parameters</title>
+    <script src="scripts/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+
+            $.getJSON("http://localhost:5000/getcustomers",
+                function (customers) {
+                    $.each(customers, function (i, r) {
+                        $('<p/>').text(r.CompanyName).
+                            appendTo('#divInfo');
+                    });
+                }
+            );
+        }); // End of Ready
+    </script>
+</head>
+
+<body>
+    <div id="divInfo"></div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Element Properties</title>
+	<style>
+		.hello { color: green; }
+	</style>
+</head>
+<body>
+    <div id="hello">Hello world</div>
+	<div>Another div</div>
+	<p>When I was a child I had a fever</p>
+	<p class="hello">My hands felt just like two balloons</p>
+
+    <script>
+		alert("Hello debugging people!");
+		let allDivs = document.getElementByTagName("div");
+		let div55 = allDivs[0];
+		let div56 = allDivs["hello"];
+		let div57 = allDivs[1];
+		alert("div55");
+		
+        div1 = document.getElementById("hello");
+		//div1.innerText = "Sandcastle";
+        div1.innerHTML = "Hello QA Apprenticeships";
+        div1.className = "hello";
+        div1.style.backgroundColor = "yellow";
+/*
+        //document.write('div1 innerText: ' + div1.innerText + '<br/>');
+        //div1.innerHTML = "Hello QA Apprenticeships <br/>Hello everyone";
+        //document.write('div1 innerHTML: ' + div1.innerHTML + '<br/>');
+        //document.write('div1 innerText: ' + div1.innerText + '<br/>');
+
+        //div1.innerText = "Hello QA Apprenticeships <br/>Hello everyone";
+        //document.write('div1 innerHTML: ' + div1.innerHTML + '<br/>');
+        //document.write('div1 innerText: ' + div1.innerText + '<br/>');
+*/
+    </script>
+</body>
+</html>

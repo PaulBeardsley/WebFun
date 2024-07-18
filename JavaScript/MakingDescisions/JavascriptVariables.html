@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript variables and scope</title>
+    <script>
+        y = 1;
+        var x = 2;
+        x = "Bob";
+        alert("the value of x is " + x);
+        function declarez(){
+            var z = 123;
+            alert("the value of z in function is " + z);
+            x = true;
+            //var x = false;
+            alert("the value of x in function is " + x);
+            {
+                let m = "Bill";
+                alert("the value of m in code block is " + m);
+            }
+            //alert("the value of m outside code block is " + m);
+        }
+    </script>
+    <script>
+        alert("the value of y is " + y);
+        alert("the value of x is " + x);
+        declarez();
+        alert("the value of x is " + x);
+        //alert("the value of z outside function is " + z);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

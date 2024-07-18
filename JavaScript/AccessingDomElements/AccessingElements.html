@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Elements using the DOM</title>
+</head>
+<body>
+    <div id="hello">Hello world</div>
+    <div>Another div</div>
+
+    <script>
+        div1 = document.getElementById("hello");
+        allDivs = document.getElementsByTagName("div");
+        div2 = allDivs[0];
+        div3 = allDivs["hello"];
+        div4 = allDivs[1];
+
+        //alert('div2: ' + div2.innerHTML);
+        //alert('div3: ' + div3.innerHTML);
+        //alert('div4: ' + div4.innerHTML);
+
+        //document.write('div2: ' + div2.innerHTML + '<br/>');
+        //document.write('div3: ' + div3.innerHTML + '<br/>');
+        //document.write('div4: ' + div4.innerHTML + '<br/>');
+
+    </script>
+</body>
+</html>
